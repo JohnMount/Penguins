@@ -154,3 +154,5 @@ This page found here: [https://github.com/JohnMount/Penguins](https://github.com
 
 Python example here: [https://github.com/JohnMount/Penguins/blob/main/Penguins.ipynb](https://github.com/JohnMount/Penguins/blob/main/Penguins.ipynb)
 
+R example here: [https://github.com/JohnMount/Penguins/blob/main/Rexample.md](https://github.com/JohnMount/Penguins/blob/main/Rexample.md)
+
