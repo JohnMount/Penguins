@@ -1,0 +1,75 @@
+---
+title: "Penguins"
+output: github_document
+---
+
+[https://github.com/allisonhorst/palmerpenguins Palmer Penguins example](https://github.com/allisonhorst/palmerpenguins) as comma separated value files.
+
+
+
+```{r}
+penguins <- read.table(
+  'https://raw.githubusercontent.com/JohnMount/Penguins/main/penguins.csv', 
+  header = TRUE, 
+  sep = ',', 
+  quote = '"')
+
+print(dim(penguins))
+
+knitr::kable(head(penguins))
+```
+
+
+```{r}
+penguins_raw <- read.table(
+  'https://raw.githubusercontent.com/JohnMount/Penguins/main/penguins_raw.csv', 
+  header = TRUE, 
+  sep = ',', 
+  quote = '"')
+
+print(dim(penguins_raw))
+
+knitr::kable(head(penguins_raw))
+```
+
+
+Palmer Penguins data from:
+
+  [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
+
+>citation("palmerpenguins")
+>
+> To cite palmerpenguins in publications use:
+>
+>   Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism
+>   and Environmental Variability within a Community of Antarctic
+>   Penguins (Genus Pygoscelis). PLoS ONE 9(3): e90081.
+>   https://doi.org/10.1371/journal.pone.0090081
+>
+> A BibTeX entry for LaTeX users is
+>
+>   @Article{,
+>     title = {Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis)},
+>     author = {Gorman KB and Williams TD and Fraser WR},
+>     journal = {PLoS ONE},
+>     year = {2014},
+>     volume = {9(3)},
+>     number = {e90081},
+>     pages = {-13},
+>     url = {https://doi.org/10.1371/journal.pone.0090081},
+>   }
+
+
+Saved using `R`:
+
+    # install.packages("remotes")
+    remotes::install_github("allisonhorst/palmerpenguins")
+    write.csv(penguins, 'penguins.csv', row.names = FALSE, quote = FALSE)
+    write.csv(penguins_raw, 'penguins_raw.csv', row.names = FALSE, quote = TRUE)
+
+Exported so Python users can also use this data (original package doesn't seem to currently export a csv).
+
+
+This page found here: [https://github.com/JohnMount/Penguins](https://github.com/JohnMount/Penguins)
+
+Python example here: [https://github.com/JohnMount/Penguins/blob/main/Penguins.ipynb](https://github.com/JohnMount/Penguins/blob/main/Penguins.ipynb)
